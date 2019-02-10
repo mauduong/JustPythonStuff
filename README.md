@@ -1,1 +1,1 @@
-# Basic-Collatz-Sequence
+# Repository for random Python scripts
