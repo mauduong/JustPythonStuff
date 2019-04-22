@@ -1,5 +1,5 @@
 #! /usr/bin/python3
-# compareExcelRows.py
+# compareExcelCells.py
 # mauduong
 # 22/04/2019
 # Find duplicate cells between two excel spreadsheets.
