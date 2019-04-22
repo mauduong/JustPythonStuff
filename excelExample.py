@@ -6,9 +6,9 @@
 import openpyxl # sudo apt-get install python-openpyxl python3-openpyxl
 workBook = openpyxl.load_workbook('example.xlsx')
 
-print(workBook.get_sheet_names())
+print(workBook)
 
-sheet = workBook.get_sheet_by_name('Sheet1')
+sheet = workBook['Sheet1']
 print(sheet)
 print(type(sheet))
 print(sheet.title)
@@ -18,7 +18,7 @@ print(sheet['B2'].value)
 
 print('Row: ' + str(sheet['B2'].row) + '\nColumn: ' + sheet['B2'].column + '\nValue: ' + sheet['B2'].value)
 
-getActiveSheet = workBook.get_active_sheet()
+getActiveSheet = workBook.active
 print(getActiveSheet)
 
 print(sheet.cell(row=1, column=2))
