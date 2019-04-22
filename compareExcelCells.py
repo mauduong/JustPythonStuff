@@ -13,15 +13,15 @@ sheet2 = workBook2.active
 
 print('Searching...')
 startTime = time.time()
-rowNumber = 0
 numberOfDuplicates = 0
+
 for (column, column2) in zip(sheet1.iter_cols(), sheet2.iter_cols()):
     for (cell, cell2) in zip(column, column2):
-        rowNumber += 1
         if cell.value == cell2.value:
             numberOfDuplicates += 1
             print('Duplicate found.\nValue 1: ' + str(cell.value) + '\nValue 2: ' + str(cell2.value))
             print('Cell: ' + str(cell.column) + str(cell.row) + '\nColumn: ' + str(cell.column) + ' Row: ' + str(cell.row) + '\n')
+
 endTime = time.time()
 print('Time taken: ' + str(round((endTime - startTime) * 1000, 2)) + 'ms')
 print('Duplicates found: ' + str(numberOfDuplicates))
